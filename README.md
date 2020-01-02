@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
 
-##About
+## About
 
 This application provides a way to create delete and search notes.  
 
