@@ -1,0 +1,19 @@
+<div id="wrapper">
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav nav">
+            <li *ngFor="let item of notesArray; let i = index" (click)="selectCard(item , i)" class="card w-100">
+                <span>
+                    <p *ngIf="item.text.length > 14; else elseBlock">
+                        <i class="fa fa-file-text-o fa-xs mr-4"></i> {{item.text.substring(0,14)}}... </p>
+                    <ng-template #elseBlock>
+                        <i class="fa fa-file-text-o fa-xs mr-4"></i> {{item.text}} </ng-template>
+                    <p class="text-muted small">
+                        <i class="fa fa-clock-o"></i> {{item.timestamp | date : "medium"}} </p>
+                </span>
+            </li>
+        </ul>
+
+        <p class="text-muted small mx-2 my-2" *ngIf="noData">No results found</p>
+
+    </div>
+</div>

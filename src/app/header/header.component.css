@@ -1,0 +1,9 @@
+.toppane{
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.appname{
+    color: #edbb00 !important;
+    font-weight: 600;
+    font-size: larger;
+}
