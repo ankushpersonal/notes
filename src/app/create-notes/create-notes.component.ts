@@ -60,7 +60,12 @@ export class CreateNotesComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (localStorage.getItem('notes')) this.notesArray = JSON.parse(localStorage.getItem('notes'));
+    if (localStorage.getItem('notes')){
+      this.notesArray = JSON.parse(localStorage.getItem('notes'));
+    }
+    else{
+      localStorage.setItem('notes' , '[]');
+    }
     this.listen();
   }
 
